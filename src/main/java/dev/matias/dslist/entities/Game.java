@@ -17,7 +17,7 @@ public class Game {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String title;
 
@@ -34,6 +34,9 @@ public class Game {
 
     @Column(columnDefinition = "TEXT")
     private String shortDescription;
+
+    public Game() {
+    }
 
     public Game(String title, Integer year, String genre, Double score, String platforms, String imgUrl,
             String shortDescription,

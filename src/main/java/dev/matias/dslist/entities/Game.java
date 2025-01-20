@@ -12,7 +12,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "tb_games")
+@Table(name = "tb_game")
 public class Game {
 
     @Id
@@ -25,17 +25,24 @@ public class Game {
     private Integer year;
 
     private String genre;
-    private String platform;
+    private String platforms;
+    private Double score;
     private String imgUrl;
-    private String shortDescription;
+
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
-    public Game(String title, Integer year, String genre, String platform, String imgUrl, String shortDescription,
+    @Column(columnDefinition = "TEXT")
+    private String shortDescription;
+
+    public Game(String title, Integer year, String genre, Double score, String platforms, String imgUrl,
+            String shortDescription,
             String longDescription) {
         setTitle(title);
         setYear(year);
         setGenre(genre);
-        setPlatform(platform);
+        setPlatforms(platforms);
+        setScore(score);
         setImgUrl(imgUrl);
         setShortDescription(shortDescription);
         setLongDescription(longDescription);

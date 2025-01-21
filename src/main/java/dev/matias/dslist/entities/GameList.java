@@ -15,16 +15,14 @@ public class GameList {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Integer position;
 
     GameList() {
 
     }
 
-    GameList(Long id, String name, Integer position) {
+    GameList(Long id, String name) {
         setId(id);
         setName(name);
-        setPosition(position);
     }
 
 }

@@ -11,6 +11,7 @@ public class DslistApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DslistApplication.class, args);
 		Utils.clearScreen();
+		System.out.println("this is a test, ignore it");
 	}
 
 }
